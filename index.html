@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Order Right!</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #c6d0da;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    padding: 30px 0; /* Changed padding from 50px to 30px */
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Changed margin-bottom from 40px to 20px */
+}
+
+.dishes-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dishes {
+    width: calc(25% - 20px); /* 25% width for each product with 20px margin */
+    margin-bottom: 20px; /* Changed margin-bottom from 40px to 20px */
+    transition: transform 0.3s;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dishes:hover {
+    transform: scale(1.05);
+}
+
+.dishes img {
+    max-width: 70%;
+    border-radius: 50%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.testimonial {
+    margin-top: 30px; /* Changed margin-top from 50px to 30px */
+    text-align: center;
+}
+
+.testimonial img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.contact {
+    background-color: #e9b7b7;
+    padding: 30px 0; /* Changed padding from 50px to 30px */
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Changed margin-bottom from 40px to 20px */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-info-item {
+    flex: 1;
+    padding: 0 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.contact-info-item h3 {
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Order Delicious Food Online</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#dishes">dishes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Enjoy a wide range of cuisines from the comfort of your home</h2>
+            <p>Order your favorite meals online and have them delivered right to your doorstep with our convenient online food ordering system.</p>
+            <div style="display: flex; justify-content: center;">
+                <img src="https://restorapos.com/blog/uploads/What_is_online_ordering_system.jpg" alt="food" style="max-width: 100%; border-radius: 50%; margin-bottom: 20px;">
+            </div><br>
+            <a href="#dishes" class="btn">Explore Dishes</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Order Right is a popular online food ordering and delivery platform that allows users to order food . It offers a wide range of cuisine options and delivery services.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4TqTExH_E3BCxU3txPx7kpODAtPkqgMRdvA&s" alt="ORDERRIGHT" style="max-width: 100%; border-radius: 10px; margin-top: 40px;">
+        </div>
+    </section>
+
+    <section id="dishes">
+        <div class="container">
+            <h2>Our Dishes</h2>
+            <div class="dishes-container">
+                <div class="dishes">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDUycHiZRxo-5pNC8vGFntOahMqxZsXICoEq2Atzc58Q&s" alt="dish 1">
+                    <h3>PIZZA</h3>
+                </div>
+                <div class="dishes">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSoK4yUASohsAxrrFIt8rwk6okmpavgo99JGgzhJpwhw&s" alt="dishes 2">
+                    <h3>FISH CURY</h3>
+                </div>
+                <div class="dishes">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzW7zKkFdgiLRm2ALc9K3YMrAqEjd6x0E-ow&s" alt="dish 3">
+                    <h3>VEG MEALS</h3>
+                </div>
+                <div class="dishes">
+                    <img src="https://th.bing.com/th?q=Parotta+Kurma&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="dish 4">
+                    <h3>PAROTTA</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="container">
+            <h2>Customer Testimonials</h2>
+            <div class="testimonial">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User 1">
+                <p>"I love the taste of the dish and its fragrance."</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User 2">
+                <p>"The Food we had enjoyed at the time of dinner. It was really delicious taste with great quality, everything had unique taste which we had ordered."</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? Reach out to us!</p>
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <h3>Address</h3>
+                    <p>123 AAA nagar <br> sivaji City<br> chennai</p>
+                </div>
+                <div class="contact-info-item">
+                    <h3>Email</h3>
+                    <p>info@orderright.com</p>
+                </div>
+                <div class="contact-info-item">
+                    <h3>Phone</h3>
+                    <p>+1234567890</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ORDER RIGHT . All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
