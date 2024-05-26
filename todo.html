@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            background: url('https://static.vecteezy.com/system/resources/previews/006/874/952/original/cute-simple-printable-pestal-colour-flat-to-do-list-planner-design-vector.jpg') center/cover no-repeat;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .todo-input {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .todo-input input {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .todo-input button {
+            padding: 15px;
+            border: none;
+            background-color: #efc804;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .todo-input button:hover {
+            background-color:  #ebf304;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        li {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+        }
+
+        li.completed {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+
+        li button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        li button.complete {
+            color: #4caf50;
+        }
+
+        li button.delete {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="todo-input">
+            <input type="text" id="new-task" placeholder="Add a new task...">
+            <button id="add-task-button">Add</button>
+        </div>
+        <ul id="todo-list">
+            <!-- Tasks will be dynamically inserted here -->
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addTaskButton = document.getElementById('add-task-button');
+            const newTaskInput = document.getElementById('new-task');
+            const todoList = document.getElementById('todo-list');
+
+            addTaskButton.addEventListener('click', addTask);
+            newTaskInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    addTask();
+                }
+            });
+
+            function addTask() {
+                const taskText = newTaskInput.value.trim();
+                if (taskText !== '') {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <span>${taskText}</span>
+                        <div>
+                            <button class="complete">✔</button>
+                            <button class="delete">✖</button>
+                        </div>
+                    `;
+
+                    listItem.querySelector('.complete').addEventListener('click', () => {
+                        listItem.classList.toggle('completed');
+                    });
+
+                    listItem.querySelector('.delete').addEventListener('click', () => {
+                        todoList.removeChild(listItem);
+                    });
+
+                    todoList.appendChild(listItem);
+                    newTaskInput.value = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
